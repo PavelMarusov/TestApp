@@ -8,7 +8,12 @@
     <string name="price">Цена</string>
     <string name="prise_size">100</string>
     <string name="kgs">KGS</string>
-    <string name="quantity">за 1 кг</string>
+    <string name="quantity">/шт</string>
     <string name="hint">Продается что-то, чего-то</string>
     <string name="location">Бишкек</string>
+    <string name="count">189</string>
+    <string name="views">просмотров</string>
+    <string name="data_str">Дата обновления</string>
+    <string name="data">20 Дек, 2020</string>
+    <string name="str_ot">от</string>
 </resources>
