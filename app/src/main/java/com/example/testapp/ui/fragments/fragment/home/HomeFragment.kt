@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testapp.R
+import com.example.testapp.ui.detail.DetailActivity
 import com.example.testapp.ui.model.PostModel
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -26,9 +27,12 @@ class HomeFragment : Fragment() {
         return view
     }
     private fun initAdapter() {
-        adapter = HomeFragmentAdapter()
+        adapter = HomeFragmentAdapter(){ item: PostModel -> onItemClick(item) }
         recycler.adapter = adapter
         viewModel.getBook()?.let { adapter.initList(it) }
 
+    }
+    fun onItemClick(item: PostModel) {
+        DetailActivity.instanceDetail(requireActivity(), item)
     }
 }
